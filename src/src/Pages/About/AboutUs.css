@@ -1,0 +1,180 @@
+.about-section {
+  background-color: #003366; 
+  color: #FAF5F0; 
+  padding: 70px 20px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+
+.about-floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 100px;
+  color: rgba(0, 150, 136, 0.1); 
+  filter: blur(2px);
+  animation: float 14s ease-in-out infinite;
+}
+
+.chip { top: 20%; left: 8%; }
+.network { top: 65%; right: 8%; }
+.rocket { bottom: 10%; left: 48%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #203864; 
+}
+
+.about-container h1 span {
+  color: #193260; 
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #010000f8; 
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.about-card {
+  background-color: rgba(4, 0, 0, 0.02);
+  padding: 24px;
+  border-radius: 16px;
+  width: 300px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  background-color: rgba(19, 1, 1, 0.05);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 14px;
+  color: #203864; /* Teal Icon Color */
+}
+
+.about-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #203864; /* Heading Blue */
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #01070f; /* Light Gray Text */
+  line-height: 1.5;
+}
+
+/* === QUOTE TEXT === */
+blockquote {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #203864; /* Teal Quote Color */
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+/* === CALL TO ACTION BUTTON (optional) === */
+.abouts-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #203864; /* Dark Blue */
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.abouts-button:hover {
+  background-color: #0284c7; /* Lighter Blue */
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* === ANIMATION (fade-in effect) === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE STYLING === */
+@media (max-width: 768px) {
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .floating-icon {
+    font-size: 60px;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+}
