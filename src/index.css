@@ -1,0 +1,26 @@
+/* Set uniform white background and global font */
+html, body {
+  background-color: #ffffff !important; /* Clean white background */
+  color: #012055; /* Consistent text color */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent background on sections and containers */
+section, .page-section, .container, .content,
+.main-wrapper, .app-container,
+.services-section, .why-choose-section, .about-section, .contact-section {
+  background-color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  color: #012055;
+}
+
+/* Force all text components and elements to inherit the global font */
+h1, h2, h3, h4, h5, h6,
+p, span, li, a, div, input, button, textarea, label {
+  font-family: 'Poppins', sans-serif !important;
+  color: inherit;
+}
